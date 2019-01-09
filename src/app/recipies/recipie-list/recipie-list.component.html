@@ -1,1 +1,29 @@
-<app-recipie-item></app-recipie-item>
+<div class="row">
+  <div class="col-xs-12">
+    <button class="btn btn-success">New Recipie</button>
+  </div>
+</div>
+<hr />
+<div class="col">
+  <div class="col-xs-12">
+    <a
+      href=""
+      class="list-group-item clearfix"
+      *ngFor="let recipie of recipies"
+    >
+      <div class="pull-left">
+        <h4 class="list-group-item-heading">{{ recipie.name }}</h4>
+        <p class="list-group-item-text">{{ recipie.description }}</p>
+      </div>
+      <span class="pull-right">
+        <img
+          [src]="recipie.imagePath"
+          alt="{{ recipie.name }}"
+          class="img-responsive"
+          style="max-height: 80px"
+        />
+      </span>
+    </a>
+    <app-recipie-item></app-recipie-item>
+  </div>
+</div>
