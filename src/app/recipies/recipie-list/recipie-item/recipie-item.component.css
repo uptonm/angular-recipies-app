@@ -1,0 +1,4 @@
+.list-group-item:hover {
+  right: 0.2em;
+  border: 0.1em solid lightskyblue;
+}

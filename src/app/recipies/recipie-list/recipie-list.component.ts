@@ -1,25 +1,21 @@
-import { Component, OnInit } from "@angular/core";
-import { Recipie } from "../recipie.model";
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Recipie } from '../recipie.model';
+import { mockData } from '../recipieMockData';
 
 @Component({
-  selector: "app-recipie-list",
-  templateUrl: "./recipie-list.component.html",
-  styleUrls: ["./recipie-list.component.css"]
+  selector: 'app-recipie-list',
+  templateUrl: './recipie-list.component.html',
+  styleUrls: ['./recipie-list.component.css']
 })
 export class RecipieListComponent implements OnInit {
-  recipies: Recipie[] = [
-    new Recipie(
-      "Test Recipie Title",
-      "Test Recipie Description",
-      "https://www.rd.com/wp-content/uploads/2018/04/9-Foods-You-Should-Never-Eat-Before-Bed-760x506.jpg"
-    ),
-    new Recipie(
-      "Test Recipie Title",
-      "Test Recipie Description",
-      "https://www.rd.com/wp-content/uploads/2018/04/9-Foods-You-Should-Never-Eat-Before-Bed-760x506.jpg"
-    )
-  ];
+  recipies: Recipie[] = mockData;
+  @Output() recipieSelected = new EventEmitter<Recipie>();
+
   constructor() {}
 
   ngOnInit() {}
+
+  onRecipieSelected(recipie: Recipie) {
+    this.recipieSelected.emit(recipie);
+  }
 }
