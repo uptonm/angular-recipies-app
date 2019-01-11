@@ -5,7 +5,7 @@ export const mockData: Recipie[] = [
     'Tasty Schnitzel',
     'A super-tasty Schnitzel - just awesome!',
     'https://upload.wikimedia.org/wikipedia/commons/7/72/Schnitzel.JPG',
-    [new Ingredient('Meat', 1), new Ingredient('French Fries', 20)]
+    [new Ingredient('Meat', 2), new Ingredient('French Fries', 20)]
   ),
   new Recipie(
     'Big Fat Burger',
