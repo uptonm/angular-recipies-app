@@ -1,6 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Recipie } from '../recipie.model';
-import { RecipiesService } from '../recipies.service';
 
 @Component({
   selector: 'app-recipie-detail',
@@ -9,7 +8,7 @@ import { RecipiesService } from '../recipies.service';
 })
 export class RecipieDetailComponent implements OnInit {
   @Input() recipie: Recipie;
-  constructor(private recipieService: RecipiesService) {}
+  constructor() {}
 
   ngOnInit() {}
 }
