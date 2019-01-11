@@ -1,20 +1,20 @@
 <div class="row">
   <div class="col-xs-12">
     <img
-      src="{{ selected.imagePath }}"
-      alt="{{ selected.name }}"
+      src="{{ recipie.imagePath }}"
+      alt="{{ recipie.name }}"
       class="img-responsive mainImg"
     />
   </div>
 </div>
 <div class="row">
   <div class="col-xs-12">
-    <h1>{{ selected.name }}</h1>
+    <h1>{{ recipie.name }}</h1>
   </div>
 </div>
 <div class="row">
   <div class="col-xs-12">
-    <div class="btn-group">
+    <div class="btn-group" appDropdown>
       <button class="btn btn-primary dropdown-toggle">
         Manage Recipie <span class="caret"></span>
       </button>
@@ -27,6 +27,6 @@
   </div>
 </div>
 <div class="row">
-  <div class="col-xs-12">{{ selected.description }}</div>
+  <div class="col-xs-12">{{ recipie.description }}</div>
 </div>
 <div class="row"><div class="col-xs-12">Ingredients</div></div>
